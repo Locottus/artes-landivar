@@ -18,4 +18,15 @@ describe('Footer', () => {
     expect(text).toContain('Bicentenario GT');
     expect(text).toContain(String(new Date().getFullYear()));
   });
+
+  it('should credit the portal developer with a secure external link', async () => {
+    const fixture = TestBed.createComponent(Footer);
+    await fixture.whenStable();
+    const link = (fixture.nativeElement as HTMLElement).querySelector<HTMLAnchorElement>(
+      'a[href="https://hh-consultingservices.com/"]',
+    );
+    expect(link?.textContent).toContain('H&H Consulting Services');
+    expect(link?.target).toBe('_blank');
+    expect(link?.rel).toBe('noopener noreferrer');
+  });
 });
