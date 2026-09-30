@@ -1,4 +1,5 @@
 import { registerLocaleData } from '@angular/common';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 import localeEs from '@angular/common/locales/es';
 import { ApplicationConfig, LOCALE_ID, provideBrowserGlobalErrorListeners } from '@angular/core';
 import {
@@ -15,6 +16,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     { provide: LOCALE_ID, useValue: 'es' },
+    provideHttpClient(withFetch()),
     provideRouter(
       routes,
       withComponentInputBinding(),

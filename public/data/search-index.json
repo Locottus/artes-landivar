@@ -1,0 +1,232 @@
+[
+  {
+    "label": "Inicio",
+    "path": "/",
+    "description": "Página principal del Centro Virtual del Patrimonio.",
+    "tags": ["home", "principal", "portada", "inicio", "cvp", "centro virtual del patrimonio"]
+  },
+  {
+    "label": "Museo Virtual Landivariano",
+    "path": "/museo-virtual",
+    "description": "Obras plásticas, glosario, agenda y exposiciones del Museo Virtual Landivariano.",
+    "tags": ["museo", "virtual", "exposiciones", "arte", "colección", "landivariano"]
+  },
+  {
+    "label": "Obras Plásticas",
+    "path": "/museo-virtual/obras-plasticas",
+    "description": "Obras de alto valor, colecciones y autores del acervo landivariano.",
+    "tags": ["obras", "arte plástico", "acervo", "piezas", "artes visuales"]
+  },
+  {
+    "label": "Alto valor",
+    "path": "/museo-virtual/obras-plasticas/alto-valor",
+    "description": "Piezas destacadas del acervo.",
+    "tags": ["destacadas", "valiosas", "joyas", "piezas importantes", "tesoros"]
+  },
+  {
+    "label": "Colecciones",
+    "path": "/museo-virtual/obras-plasticas/colecciones",
+    "description": "Pintura, escultura, murales y fotografía.",
+    "tags": ["colección", "catálogo", "galería", "acervo"]
+  },
+  {
+    "label": "Pintura",
+    "path": "/museo-virtual/obras-plasticas/colecciones/pintura",
+    "tags": ["cuadros", "óleo", "acuarela", "lienzo", "pintores"]
+  },
+  {
+    "label": "Escultura",
+    "path": "/museo-virtual/obras-plasticas/colecciones/escultura",
+    "tags": ["esculturas", "tallas", "bronce", "madera", "piedra", "escultores"]
+  },
+  {
+    "label": "Murales",
+    "path": "/museo-virtual/obras-plasticas/colecciones/murales",
+    "tags": ["mural", "muralismo", "pared", "fresco"]
+  },
+  {
+    "label": "Fotografía",
+    "path": "/museo-virtual/obras-plasticas/colecciones/fotografia",
+    "tags": ["fotos", "imágenes", "fotógrafos", "retratos"]
+  },
+  {
+    "label": "Autores",
+    "path": "/museo-virtual/obras-plasticas/autores",
+    "description": "Artistas representados en el museo.",
+    "tags": ["artistas", "pintores", "escultores", "creadores", "biografías"]
+  },
+  {
+    "label": "GlosariArte",
+    "path": "/museo-virtual/glosariarte",
+    "description": "Glosario de términos de arte ordenado alfabéticamente.",
+    "tags": ["glosario", "diccionario", "términos", "definiciones", "vocabulario", "palabras"]
+  },
+  {
+    "label": "Agenda del Centro y Sugerencias",
+    "path": "/museo-virtual/agenda",
+    "description": "Actividades del Centro y espacio para compartir tus sugerencias.",
+    "tags": ["agenda", "eventos", "actividades", "calendario", "sugerencias", "comentarios", "buzón"]
+  },
+  {
+    "label": "Nación de Sueños",
+    "path": "/museo-virtual/nacion-de-suenos",
+    "description": "Exposición Nación de Sueños.",
+    "tags": ["exposición", "muestra", "sueños", "nación"]
+  },
+  {
+    "label": "Patrimonio del semestre",
+    "path": "/museo-virtual/patrimonio-del-semestre",
+    "description": "Pieza patrimonial destacada durante el semestre.",
+    "tags": ["pieza del semestre", "destacado", "patrimonio", "semestre"]
+  },
+  {
+    "label": "Patrimonio Cultural Guatemalteco",
+    "path": "/patrimonio-guatemalteco",
+    "description": "Bienes de Interés Cultural y Patrimonio Cultural Inmaterial de Guatemala.",
+    "tags": ["guatemala", "patrimonio", "cultura", "herencia", "identidad"]
+  },
+  {
+    "label": "Bien de Interés Cultural (BIC)",
+    "path": "/patrimonio-guatemalteco/bic",
+    "description": "Qué es un BIC, Ermitas de la Antigua Guatemala y tours virtuales 360°.",
+    "tags": ["bic", "bienes culturales", "monumentos", "patrimonio tangible", "patrimonio material"]
+  },
+  {
+    "label": "Ermitas de la Antigua Guatemala",
+    "path": "/patrimonio-guatemalteco/bic/ermitas-antigua-guatemala",
+    "tags": ["ermitas", "antigua", "iglesias", "capillas", "arquitectura colonial", "sacatepéquez"]
+  },
+  {
+    "label": "Tours virtuales 360°",
+    "path": "/patrimonio-guatemalteco/bic/tours-360",
+    "description": "Recorridos virtuales por las ermitas de la Antigua Guatemala.",
+    "tags": ["tour", "360", "recorrido virtual", "visita virtual", "panorámica"]
+  },
+  {
+    "label": "Capilla San Jerónimo",
+    "path": "/patrimonio-guatemalteco/bic/tours-360/capilla-san-jeronimo",
+    "tags": ["san jerónimo", "capilla", "tour 360", "ermita", "antigua"]
+  },
+  {
+    "label": "Espíritu Santo",
+    "path": "/patrimonio-guatemalteco/bic/tours-360/espiritu-santo",
+    "tags": ["espíritu santo", "ermita", "tour 360", "antigua"]
+  },
+  {
+    "label": "Manchén",
+    "path": "/patrimonio-guatemalteco/bic/tours-360/manchen",
+    "tags": ["manchén", "ermita", "tour 360", "antigua"]
+  },
+  {
+    "label": "Nuestra Señora de los Dolores del Cerro",
+    "path": "/patrimonio-guatemalteco/bic/tours-360/dolores-del-cerro",
+    "tags": ["dolores del cerro", "virgen de dolores", "ermita", "tour 360", "antigua"]
+  },
+  {
+    "label": "Santa Piedra de la Cruz",
+    "path": "/patrimonio-guatemalteco/bic/tours-360/santa-piedra-de-la-cruz",
+    "tags": ["santa cruz", "piedra", "ermita", "tour 360", "antigua"]
+  },
+  {
+    "label": "San Jerónimo Recolecto",
+    "path": "/patrimonio-guatemalteco/bic/tours-360/san-jeronimo-recolecto",
+    "tags": ["recolección", "recolecto", "san jerónimo", "ermita", "tour 360", "antigua"]
+  },
+  {
+    "label": "Patrimonio Cultural Inmaterial (PCI)",
+    "path": "/patrimonio-guatemalteco/pci",
+    "description": "Tradiciones y saberes vivos de Guatemala.",
+    "tags": ["pci", "inmaterial", "tradiciones", "costumbres", "saberes", "unesco", "folclor"]
+  },
+  {
+    "label": "Barriletes de Santiago Sacatepéquez",
+    "path": "/patrimonio-guatemalteco/pci/barriletes-santiago-sacatepequez",
+    "tags": ["barriletes", "papalotes", "cometas", "día de los santos", "todos los santos", "sacatepéquez"]
+  },
+  {
+    "label": "Cacao",
+    "path": "/patrimonio-guatemalteco/pci/cacao",
+    "tags": ["cacao", "chocolate", "maya", "gastronomía", "bebida"]
+  },
+  {
+    "label": "Patrimonio Cultural Landivariano",
+    "path": "/patrimonio-landivariano",
+    "description": "Historia, arte y memoria de la Universidad Rafael Landívar.",
+    "tags": ["url", "landívar", "universidad", "historia", "memoria", "landivariano"]
+  },
+  {
+    "label": "60 Aniversario URL",
+    "path": "/patrimonio-landivariano/60-aniversario",
+    "description": "Seis décadas de historia landivariana.",
+    "tags": ["aniversario", "60 años", "sesenta", "celebración", "décadas"]
+  },
+  {
+    "label": "Evolución Histórica y Arquitectónica URL",
+    "path": "/patrimonio-landivariano/60-aniversario/evolucion-historica",
+    "tags": ["evolución", "historia", "arquitectura", "campus", "edificios", "línea de tiempo"]
+  },
+  {
+    "label": "Momentos Landívar",
+    "path": "/patrimonio-landivariano/60-aniversario/momentos-landivar",
+    "tags": ["momentos", "recuerdos", "hitos", "fotografías", "memoria"]
+  },
+  {
+    "label": "Capilla Santa Sofía (tour 360°)",
+    "path": "/patrimonio-landivariano/60-aniversario/capilla-santa-sofia",
+    "tags": ["santa sofía", "capilla", "tour 360", "recorrido virtual", "campus"]
+  },
+  {
+    "label": "Galería Rectores URL",
+    "path": "/patrimonio-landivariano/galeria-rectores",
+    "tags": ["rectores", "autoridades", "retratos", "galería", "rectoría"]
+  },
+  {
+    "label": "Centro de Artes Landívar",
+    "path": "/patrimonio-landivariano/centro-de-artes",
+    "tags": ["centro de artes", "artes", "cultura", "talleres", "landívar"]
+  },
+  {
+    "label": "Línea de tiempo MOMENTUM",
+    "path": "/patrimonio-landivariano/momentum",
+    "tags": ["momentum", "línea de tiempo", "cronología", "historia", "timeline"]
+  },
+  {
+    "label": "Memorias: Laboratorio Teatral URL",
+    "path": "/patrimonio-landivariano/memorias-laboratorio-teatral",
+    "tags": ["teatro", "laboratorio teatral", "obras de teatro", "artes escénicas", "memorias"]
+  },
+  {
+    "label": "Bicentenario GT",
+    "path": "/bicentenario",
+    "description": "Contenidos conmemorativos del Bicentenario de Guatemala.",
+    "tags": ["bicentenario", "independencia", "200 años", "1821", "2021", "patria"]
+  },
+  {
+    "label": "Himno Nacional",
+    "path": "/bicentenario/himno-nacional",
+    "tags": ["himno", "himno nacional", "símbolos patrios", "música", "letra"]
+  },
+  {
+    "label": "Galería Otto Becker Meyer",
+    "path": "/bicentenario/galeria-otto-becker-meyer",
+    "tags": ["otto becker", "galería", "fotografía histórica", "exposición"]
+  },
+  {
+    "label": "Acerca del Museo",
+    "path": "/acerca",
+    "description": "Misión, visión e historia del Centro Virtual del Patrimonio.",
+    "tags": ["acerca", "quiénes somos", "misión", "visión", "historia", "nosotros", "sobre el museo"]
+  },
+  {
+    "label": "Redes Sociales",
+    "path": "/redes-sociales",
+    "description": "Síguenos en nuestras redes sociales.",
+    "tags": ["redes", "facebook", "instagram", "youtube", "tiktok", "x", "twitter", "síguenos"]
+  },
+  {
+    "label": "Contacto",
+    "path": "/contacto",
+    "description": "Correo y extensiones del Centro Virtual del Patrimonio.",
+    "tags": ["contacto", "correo", "email", "teléfono", "extensión", "ubicación", "escríbenos"]
+  }
+]
