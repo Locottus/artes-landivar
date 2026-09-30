@@ -1,0 +1,36 @@
+.contact__card:hover {
+  transform: none;
+}
+
+.contact__list {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+}
+
+.contact__list dt {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.contact__list dd {
+  margin: 0;
+}
+
+.contact__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.contact__table th,
+.contact__table td {
+  padding: var(--space-2);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.contact__table th {
+  color: var(--color-text-muted);
+}

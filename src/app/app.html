@@ -1,0 +1,10 @@
+<a class="skip-link" href="#contenido" (click)="skipToContent($event)">Saltar al contenido</a>
+
+<cvp-header />
+<cvp-breadcrumb />
+
+<main id="contenido" #main class="app-main" tabindex="-1">
+  <router-outlet />
+</main>
+
+<cvp-footer />

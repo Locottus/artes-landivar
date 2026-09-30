@@ -1,0 +1,30 @@
+.page-hero {
+  padding-block: var(--space-6);
+  background: linear-gradient(120deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  color: var(--color-text-inverse);
+}
+
+.page-hero__eyebrow {
+  color: var(--color-secondary-light);
+}
+
+.page-hero__title {
+  color: var(--color-text-inverse);
+}
+
+.page-hero__lead {
+  max-width: 60ch;
+  margin: 0;
+  font-size: var(--font-size-md);
+  opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .page-hero {
+    padding-block: var(--space-5);
+  }
+
+  .page-hero__title {
+    font-size: var(--font-size-xl);
+  }
+}

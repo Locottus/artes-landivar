@@ -1,0 +1,29 @@
+<cvp-section-layout>
+  <div class="field glossary__filter">
+    <label for="glossary-filter">Filtrar términos</label>
+    <input #filterInput id="glossary-filter" type="search" placeholder="Ej. óleo" autocomplete="off"
+           [value]="filter()" (input)="onFilter(filterInput.value)" />
+  </div>
+
+  <nav class="glossary__index" aria-label="Índice alfabético">
+    @for (group of groups(); track group.letter) {
+      <a class="chip" [routerLink]="[]" [fragment]="'letra-' + group.letter">{{ group.letter }}</a>
+    }
+  </nav>
+
+  @for (group of groups(); track group.letter) {
+    <section class="glossary__group" [id]="'letra-' + group.letter" [attr.aria-labelledby]="'titulo-' + group.letter">
+      <h2 class="glossary__letter" [id]="'titulo-' + group.letter">{{ group.letter }}</h2>
+      <dl class="glossary__list">
+        @for (item of group.terms; track item.term) {
+          <div class="glossary__entry">
+            <dt>{{ item.term }}</dt>
+            <dd>{{ item.definition }}</dd>
+          </div>
+        }
+      </dl>
+    </section>
+  } @empty {
+    <p class="placeholder-box">No se encontraron términos.</p>
+  }
+</cvp-section-layout>

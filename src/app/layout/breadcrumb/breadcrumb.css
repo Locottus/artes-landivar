@@ -1,0 +1,24 @@
+.breadcrumb {
+  background-color: var(--color-bg-alt);
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--font-size-sm);
+}
+
+.breadcrumb__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin: 0 auto;
+  padding-block: var(--space-2);
+  list-style: none;
+}
+
+.breadcrumb__list li + li::before {
+  content: '/';
+  margin-right: var(--space-1);
+  color: var(--color-text-muted);
+}
+
+.breadcrumb__list [aria-current='page'] {
+  color: var(--color-text-muted);
+}

@@ -1,0 +1,16 @@
+@if (trail().length) {
+  <nav class="breadcrumb" aria-label="Ruta de navegación">
+    <ol class="container breadcrumb__list">
+      <li><a routerLink="/">Inicio</a></li>
+      @for (item of trail(); track item.path; let last = $last) {
+        <li>
+          @if (last) {
+            <span aria-current="page">{{ item.label }}</span>
+          } @else {
+            <a [routerLink]="item.path">{{ item.label }}</a>
+          }
+        </li>
+      }
+    </ol>
+  </nav>
+}

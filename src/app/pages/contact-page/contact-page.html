@@ -1,0 +1,36 @@
+<cvp-section-layout>
+  <div class="grid grid--cols-2 contact">
+    <section class="card contact__card" aria-labelledby="contact-general">
+      <div class="card__body">
+        <h2 id="contact-general" class="card__title">Información general</h2>
+        <dl class="contact__list">
+          <div>
+            <dt>Correo electrónico</dt>
+            <dd><a [href]="'mailto:' + contact.email">{{ contact.email }}</a></dd>
+          </div>
+          <div>
+            <dt>Teléfono</dt>
+            <dd>{{ contact.phone }}</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="card contact__card" aria-labelledby="contact-ext">
+      <div class="card__body">
+        <h2 id="contact-ext" class="card__title">Extensiones</h2>
+        <table class="contact__table">
+          <caption class="sr-only">Extensiones telefónicas por área</caption>
+          <thead>
+            <tr><th scope="col">Área</th><th scope="col">Extensión</th></tr>
+          </thead>
+          <tbody>
+            @for (ext of contact.extensions; track ext.area) {
+              <tr><td>{{ ext.area }}</td><td>{{ ext.extension }}</td></tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</cvp-section-layout>

@@ -1,0 +1,15 @@
+<cvp-section-layout>
+  @if (children().length) {
+    <div class="grid grid--cols-3 section-page__grid">
+      @for (child of children(); track child.path) {
+        <cvp-feature-card [title]="child.label" [description]="child.description" [link]="child.path"
+                          [image]="child.image" />
+      }
+    </div>
+  } @else {
+    <div class="placeholder-box">
+      <p><strong>Contenido en construcción.</strong></p>
+      <p>Aquí se mostrará la galería de obras, textos y recursos de «{{ page()?.label }}».</p>
+    </div>
+  }
+</cvp-section-layout>

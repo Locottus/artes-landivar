@@ -1,0 +1,85 @@
+<header class="navbar site-header">
+  <div class="container site-header__inner">
+    <a routerLink="/" class="site-header__brand" [attr.aria-label]="'Inicio - ' + site.name">
+      <!-- TODO: reemplazar por el nuevo logo institucional (public/logo.svg) -->
+      <span class="site-header__logo" aria-hidden="true">{{ site.shortName }}</span>
+      <span class="site-header__name">
+        <strong>{{ site.name }}</strong>
+        <small>{{ site.institution }}</small>
+      </span>
+    </a>
+
+    <nav id="menu-principal" class="site-header__nav" [class.is-open]="menuOpen()" aria-label="Principal">
+      <ul class="navbar__links site-header__links">
+        <li class="site-header__item">
+          <a class="site-header__link" routerLink="/" routerLinkActive="is-active"
+             [routerLinkActiveOptions]="{ exact: true }" ariaCurrentWhenActive="page">Inicio</a>
+        </li>
+
+        @for (item of items; track item.path) {
+          <li class="site-header__item">
+            @if (item.children.length) {
+              <button type="button" class="site-header__link"
+                      [class.is-active]="isActive(item)"
+                      [attr.aria-expanded]="openSubmenu() === item.path"
+                      [attr.aria-controls]="submenuId(item)"
+                      (click)="toggleSubmenu(item.path)">
+                {{ item.menuLabel ?? item.label }}
+                <svg class="site-header__chevron" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" />
+                </svg>
+              </button>
+
+              <div class="site-header__mega" [id]="submenuId(item)" [class.is-open]="openSubmenu() === item.path">
+                <a class="site-header__mega-title" [routerLink]="item.path">
+                  {{ item.label }} <span aria-hidden="true">&rarr;</span>
+                </a>
+                <ul class="site-header__mega-grid">
+                  @for (child of item.children; track child.path) {
+                    <li>
+                      <a class="site-header__mega-link" [routerLink]="child.path" routerLinkActive="is-active">
+                        {{ child.label }}
+                      </a>
+                      @if (child.children.length) {
+                        <ul class="site-header__mega-sub">
+                          @for (sub of child.children; track sub.path) {
+                            <li><a [routerLink]="sub.path" routerLinkActive="is-active">{{ sub.label }}</a></li>
+                          }
+                        </ul>
+                      }
+                    </li>
+                  }
+                </ul>
+              </div>
+            } @else {
+              <a class="site-header__link" [routerLink]="item.path" routerLinkActive="is-active"
+                 ariaCurrentWhenActive="page">{{ item.menuLabel ?? item.label }}</a>
+            }
+          </li>
+        }
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a routerLink="/buscar" class="btn btn--ghost btn--icon" aria-label="Buscar">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2" />
+          <path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </a>
+      <button type="button" class="btn btn--ghost btn--icon site-header__toggle"
+              aria-controls="menu-principal"
+              [attr.aria-expanded]="menuOpen()"
+              [attr.aria-label]="menuOpen() ? 'Cerrar menú' : 'Abrir menú'"
+              (click)="toggleMenu()">
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+          @if (menuOpen()) {
+            <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          } @else {
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          }
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>

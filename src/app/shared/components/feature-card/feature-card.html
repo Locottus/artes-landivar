@@ -1,0 +1,18 @@
+<a class="card feature-card" [class.card--feature]="variant() === 'feature'" [routerLink]="link()">
+  <div class="card__media">
+    @if (image(); as src) {
+      <img [src]="src" [alt]="imageAlt()" loading="lazy" />
+    } @else {
+      <div class="feature-card__placeholder" aria-hidden="true">{{ title().charAt(0) }}</div>
+    }
+  </div>
+  <div class="card__body">
+    @if (tag()) {
+      <span class="card__tag">{{ tag() }}</span>
+    }
+    <h3 class="card__title">{{ title() }}</h3>
+    @if (description()) {
+      <p class="feature-card__description">{{ description() }}</p>
+    }
+  </div>
+</a>

@@ -1,0 +1,57 @@
+<section class="hero">
+  <div class="container hero__inner">
+    <p class="eyebrow hero__eyebrow">{{ site.institution }}</p>
+    <h1 class="hero__title">{{ site.name }}</h1>
+    <p class="hero__lead">{{ site.tagline }}</p>
+
+    <form class="hero__search" role="search" (submit)="search($event, query.value)">
+      <label class="sr-only" for="home-search">Buscar en el sitio</label>
+      <input #query id="home-search" class="hero__input" type="search" name="q"
+             placeholder="Buscar obras, autores, patrimonio…" autocomplete="off" />
+      <button type="submit" class="btn btn--secondary">Buscar</button>
+    </form>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="opciones-title">
+  <div class="container">
+    <p class="eyebrow">Opciones</p>
+    <h2 id="opciones-title">Explora el patrimonio</h2>
+    <div class="grid grid--cols-2">
+      @for (section of sections; track section.path) {
+        <cvp-feature-card variant="feature" [title]="section.label" [description]="section.description"
+                          [link]="section.path" [image]="section.image" />
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" aria-labelledby="destacados-title">
+  <div class="container">
+    <p class="eyebrow">Destacados</p>
+    <h2 id="destacados-title">No te lo pierdas</h2>
+    <div class="grid grid--cols-3">
+      @for (item of highlights; track item.path) {
+        <cvp-feature-card [title]="item.label" [description]="item.description" [link]="item.path" />
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="acerca-title">
+  <div class="container home-about">
+    <div>
+      <p class="eyebrow">Acerca del Museo</p>
+      <h2 id="acerca-title">Un museo abierto a todos</h2>
+      <p class="text-muted">
+        El Centro Virtual del Patrimonio difunde y resguarda el acervo artístico y cultural de la
+        Universidad Rafael Landívar y de Guatemala.
+      </p>
+    </div>
+    <div class="home-about__actions">
+      <a routerLink="/acerca" class="btn btn--primary">Conócenos</a>
+      <a routerLink="/redes-sociales" class="btn btn--outline">Redes sociales</a>
+      <a routerLink="/contacto" class="btn btn--ghost">Contacto</a>
+    </div>
+  </div>
+</section>

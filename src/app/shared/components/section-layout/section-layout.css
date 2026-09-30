@@ -1,0 +1,16 @@
+.section-layout {
+  display: grid;
+  gap: var(--space-5);
+  padding-block: var(--space-5);
+}
+
+.section-layout--with-aside {
+  grid-template-columns: 260px minmax(0, 1fr);
+}
+
+@media (max-width: 900px) {
+  .section-layout--with-aside {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}

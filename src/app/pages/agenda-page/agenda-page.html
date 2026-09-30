@@ -1,0 +1,40 @@
+<cvp-section-layout>
+  <section aria-labelledby="agenda-title" class="agenda">
+    <h2 id="agenda-title">Agenda del Centro</h2>
+
+    <div class="agenda__filters" role="group" aria-label="Filtrar por tipo de actividad">
+      <button type="button" class="chip" [attr.aria-pressed]="selectedTag() === null" (click)="selectTag(null)">
+        Todas
+      </button>
+      @for (tag of tags; track tag) {
+        <button type="button" class="chip" [attr.aria-pressed]="selectedTag() === tag" (click)="selectTag(tag)">
+          {{ tag }}
+        </button>
+      }
+    </div>
+
+    <ul class="agenda__list">
+      @for (event of events(); track event.id) {
+        <li class="card agenda__event">
+          <time class="agenda__date" [attr.datetime]="event.date">
+            <span class="agenda__day">{{ event.date | date: 'd' }}</span>
+            <span class="agenda__month">{{ event.date | date: 'MMM' }}</span>
+          </time>
+          <div class="card__body agenda__body">
+            <span class="card__tag">{{ event.tag }}</span>
+            <h3 class="card__title">{{ event.title }}</h3>
+            <p class="text-muted agenda__meta">{{ event.date | date: 'fullDate' }} · {{ event.location }}</p>
+            <p class="agenda__text">{{ event.description }}</p>
+          </div>
+        </li>
+      } @empty {
+        <li class="placeholder-box">No hay actividades para este filtro.</li>
+      }
+    </ul>
+  </section>
+
+  <section aria-labelledby="sugerencias-title" class="section--alt agenda__suggestions">
+    <h2 id="sugerencias-title">¿Qué hacemos luego? Déjanos tu sugerencia</h2>
+    <cvp-suggestion-form />
+  </section>
+</cvp-section-layout>

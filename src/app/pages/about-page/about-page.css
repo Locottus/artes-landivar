@@ -1,0 +1,17 @@
+.about {
+  max-width: 900px;
+}
+
+.about__lead {
+  font-size: var(--font-size-md);
+}
+
+.about__block:hover {
+  transform: none;
+}
+
+.about__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}

@@ -1,0 +1,36 @@
+@if (submitted()) {
+  <p class="suggestion-form__success" role="status">¡Gracias! Hemos recibido tu sugerencia.</p>
+}
+
+<form class="suggestion-form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+  <div class="suggestion-form__row">
+    <div class="field">
+      <label for="sug-name">Nombre</label>
+      <input id="sug-name" type="text" formControlName="name" autocomplete="name"
+             [attr.aria-invalid]="hasError('name')" aria-describedby="sug-name-error" />
+      @if (hasError('name')) {
+        <span id="sug-name-error" class="error">Ingresa tu nombre (máx. 80 caracteres).</span>
+      }
+    </div>
+
+    <div class="field">
+      <label for="sug-email">Correo electrónico</label>
+      <input id="sug-email" type="email" formControlName="email" autocomplete="email"
+             [attr.aria-invalid]="hasError('email')" aria-describedby="sug-email-error" />
+      @if (hasError('email')) {
+        <span id="sug-email-error" class="error">Ingresa un correo válido.</span>
+      }
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="sug-text">Tu sugerencia</label>
+    <textarea id="sug-text" rows="5" formControlName="suggestion"
+              [attr.aria-invalid]="hasError('suggestion')" aria-describedby="sug-text-error"></textarea>
+    @if (hasError('suggestion')) {
+      <span id="sug-text-error" class="error">Escribe entre 10 y 1000 caracteres.</span>
+    }
+  </div>
+
+  <button type="submit" class="btn btn--secondary">Enviar sugerencia</button>
+</form>

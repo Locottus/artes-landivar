@@ -1,0 +1,32 @@
+<cvp-page-hero title="Buscar" description="Encuentra obras, autores, secciones y contenidos del Centro Virtual del Patrimonio." />
+
+<div class="container search-page">
+  <form class="search-page__form" role="search" (submit)="search($event, query.value)">
+    <div class="field search-page__field">
+      <label for="search-input">Término de búsqueda</label>
+      <input #query id="search-input" type="search" name="q" [value]="term()" autocomplete="off"
+             placeholder="Ej. cacao, ermitas, pintura…" />
+    </div>
+    <button type="submit" class="btn btn--primary">Buscar</button>
+  </form>
+
+  <p class="search-page__status" aria-live="polite">
+    @if (term()) {
+      {{ results().length }} resultado(s) para «{{ term() }}»
+    }
+  </p>
+
+  <ul class="search-page__results">
+    @for (result of results(); track result.item.path) {
+      <li class="search-page__result">
+        @if (result.trail) {
+          <p class="search-page__trail">{{ result.trail }}</p>
+        }
+        <a class="search-page__title" [routerLink]="result.item.path">{{ result.item.label }}</a>
+        @if (result.item.description) {
+          <p class="text-muted">{{ result.item.description }}</p>
+        }
+      </li>
+    }
+  </ul>
+</div>

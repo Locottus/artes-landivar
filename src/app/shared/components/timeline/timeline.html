@@ -1,0 +1,13 @@
+<ol class="timeline">
+  @for (entry of entries(); track $index) {
+    <li class="timeline__item">
+      <span class="timeline__year">{{ entry.year }}</span>
+      <div class="timeline__card">
+        <h3 class="timeline__title">{{ entry.title }}</h3>
+        <p class="timeline__text">{{ entry.description }}</p>
+      </div>
+    </li>
+  } @empty {
+    <li class="placeholder-box">Aún no hay hitos registrados.</li>
+  }
+</ol>

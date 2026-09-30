@@ -1,0 +1,44 @@
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <p class="site-footer__brand">{{ site.name }}</p>
+      <p class="site-footer__text">{{ site.tagline }}</p>
+      <a class="site-footer__link" [href]="site.institutionUrl" target="_blank" rel="noopener noreferrer">
+        {{ site.institution }}
+      </a>
+    </div>
+
+    <nav aria-label="Secciones del sitio">
+      <h2 class="site-footer__title">Explorar</h2>
+      <ul class="site-footer__list">
+        @for (item of items; track item.path) {
+          <li><a class="site-footer__link" [routerLink]="item.path">{{ item.label }}</a></li>
+        }
+      </ul>
+    </nav>
+
+    <div>
+      <h2 class="site-footer__title">Contacto</h2>
+      <ul class="site-footer__list">
+        <li><a class="site-footer__link" [href]="'mailto:' + site.contact.email">{{ site.contact.email }}</a></li>
+        <li>{{ site.contact.phone }}</li>
+        <li><a class="site-footer__link" routerLink="/contacto">Ver extensiones</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="site-footer__title">Redes sociales</h2>
+      <ul class="site-footer__list">
+        @for (social of site.social; track social.label) {
+          <li>
+            <a class="site-footer__link" [href]="social.url" target="_blank" rel="noopener noreferrer">{{ social.label }}</a>
+          </li>
+        }
+      </ul>
+    </div>
+  </div>
+
+  <div class="site-footer__bottom">
+    <p class="container">&copy; {{ year }} {{ site.institution }}. Todos los derechos reservados.</p>
+  </div>
+</footer>

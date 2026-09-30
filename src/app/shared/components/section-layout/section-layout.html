@@ -1,0 +1,12 @@
+<cvp-page-hero [title]="page()?.label ?? ''" [description]="page()?.description" [eyebrow]="eyebrow()" />
+
+<div class="container section-layout" [class.section-layout--with-aside]="section()">
+  @if (section(); as s) {
+    <aside class="section-layout__aside">
+      <cvp-section-nav [section]="s" />
+    </aside>
+  }
+  <div class="section-layout__content">
+    <ng-content />
+  </div>
+</div>
